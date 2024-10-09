@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu du Petit Bistrot</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4a4a4a;
+        }
+        .category {
+            margin-bottom: 20px;
+        }
+        .category-title {
+            background-color: #f0f0f0;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .category-content {
+            display: none;
+            padding: 10px;
+        }
+        .item {
+            margin-bottom: 10px;
+        }
+        .item-name {
+            font-weight: bold;
+        }
+        .item-description {
+            font-style: italic;
+        }
+        .item-price {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Le Petit Bistrot</h1>
+    
+    <div class="category">
+        <h2 class="category-title">Entrées</h2>
+        <div class="category-content">
+            <div class="item">
+                <span class="item-name">Salade du marché</span>
+                <span class="item-price">8€</span>
+                <p class="item-description">Mélange de salade fraîche, tomates cerises et vinaigrette maison</p>
+            </div>
+            <div class="item">
+                <span class="item-name">Soupe à l'oignon</span>
+                <span class="item-price">7€</span>
+                <p class="item-description">Soupe traditionnelle gratinée au fromage</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2 class="category-title">Plats principaux</h2>
+        <div class="category-content">
+            <div class="item">
+                <span class="item-name">Steak-frites</span>
+                <span class="item-price">18€</span>
+                <p class="item-description">Steak de bœuf grillé, frites maison et sauce au poivre</p>
+            </div>
+            <div class="item">
+                <span class="item-name">Quiche Lorraine</span>
+                <span class="item-price">14€</span>
+                <p class="item-description">Quiche aux lardons et fromage, servie avec une salade verte</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2 class="category-title">Desserts</h2>
+        <div class="category-content">
+            <div class="item">
+                <span class="item-name">Crème brûlée</span>
+                <span class="item-price">7€</span>
+                <p class="item-description">Crème vanillée avec une croûte de sucre caramélisé</p>
+            </div>
+            <div class="item">
+                <span class="item-name">Tarte Tatin</span>
+                <span class="item-price">8€</span>
+                <p class="item-description">Tarte aux pommes caramélisées, servie tiède avec de la crème fraîche</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".category-title").click(function(){
+                $(this).next(".category-content").slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>
